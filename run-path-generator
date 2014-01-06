@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export JAVA_HOME=c:/Apps/Java/jdk1.6.0_25
+export PATH=$PATH:c:/Apps/Java/jdk1.6.0_25/bin
+
+export cp="lib/cconv.jar"
+export cp="$cp;lib/poly2tri.jar"
+export cp="$cp;lib/triangulate.jar"
+export cp="$cp;lib/core.jar"
+export cp="$cp;classes"
+
+java \
+    -classpath "$cp" \
+    org.remoteaquisition.path.PathGenerator data/boundary.txt
+
